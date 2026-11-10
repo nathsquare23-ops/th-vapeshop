@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TH Vapeshop - Dashboard</title>
+
+  <!-- Fonts: Poppins, Inter and Rajdhani -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <img src="images/logo.png" alt="TH logo">
+        <span>TH Vapeshop</span>
+      </div>
+
+      <nav class="nav">
+        <a class="nav__item nav__item--active" href="dashboard.html">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M11 2.05V13h10.95A10 10 0 0 0 11 2.05z"/><path d="M9 4.2A9 9 0 1 0 19.8 15H9z"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a class="nav__item" href="#">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h3l2.5 12h11L21 6H6"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+          <span>Sales Management</span>
+        </a>
+        <a class="nav__item" href="#">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>
+          <span>Inventory Hub</span>
+        </a>
+        <a class="nav__item" href="#">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h3l2.5 12h11L21 6H6"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+          <span>Sales Report</span>
+        </a>
+        <a class="nav__item" href="#">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+          <span>Settings</span>
+        </a>
+        <a class="nav__item" href="#">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span>Recent Activities</span>
+        </a>
+      </nav>
+
+      <a class="nav__item nav__signout" href="index.html">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+        <span>Sign Out</span>
+      </a>
+    </aside>
+
+    <!-- ================= MAIN AREA ================= -->
+    <div class="main">
+
+      <!-- Top bar -->
+      <header class="topbar">
+        <h1 class="topbar__title">Dashboard</h1>
+
+        <div class="search">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#4f5bff" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input type="text" placeholder="Search here...">
+        </div>
+
+        <button class="bell" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#f5a800" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="bell__dot"></span>
+        </button>
+
+        <div class="user">
+          <img class="user__photo" src="images/avatar.png" alt="Roroy Maur">
+          <div class="user__text">
+            <strong>Roroy Maur</strong>
+            <span>Admin</span>
+          </div>
+          <svg class="user__chevron" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </header>
+
+      <!-- Page content -->
+      <main class="content">
+
+        <!-- ===== LEFT COLUMN ===== -->
+        <div class="column">
+
+          <!-- Sales + stock summary -->
+          <section class="card summary">
+            <h2 class="summary__title">Today’s Sales | October 27, 2026</h2>
+            <p class="summary__sub">Sales Summary</p>
+
+            <div class="stats">
+              <div class="stat">
+                <p class="stat__label">Total Sales</p>
+                <p class="stat__value">₱2,905.60</p>
+                <p class="stat__change">+8% from yesterday</p>
+              </div>
+              <div class="stat">
+                <p class="stat__label">Total Orders</p>
+                <p class="stat__value">24</p>
+                <p class="stat__change">+10% from yesterday</p>
+              </div>
+              <div class="stat">
+                <p class="stat__label">Product Sold</p>
+                <p class="stat__value">17</p>
+                <p class="stat__change">+20% from yesterday</p>
+              </div>
+            </div>
+
+            <h2 class="summary__title summary__title--second">Today’s Stock | October 27, 2026</h2>
+            <p class="summary__sub">Stock Summary</p>
+
+            <div class="stats">
+              <div class="stat stat--stock">
+                <p class="stat__label">Individual Units Available</p>
+                <p class="stat__value">178</p>
+              </div>
+              <div class="stat stat--stock">
+                <p class="stat__label">Products Needing Attention</p>
+                <p class="stat__value">4</p>
+              </div>
+              <div class="stat stat--stock">
+                <p class="stat__label">Products with Zero Stock</p>
+                <p class="stat__value">1</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Recent orders -->
+          <section class="card orders">
+            <div class="orders__head">
+              <div>
+                <h2>Recent Orders</h2>
+                <p class="orders__new">+1 new order</p>
+              </div>
+              <a class="link-muted" href="#">Go to Sales Management Page <span>&rarr;</span></a>
+            </div>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th><th>Item</th><th>Qty</th><th>Order Date</th><th>Amount</th><th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="muted">I293DSA39</td><td>Iphone 13</td><td>4</td><td class="muted">January 20, 2022</td><td>$799.00</td>
+                  <td><span class="badge badge--pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td class="muted">U2349SD12</td><td>Xiaomi Redmi Note 10</td><td>1</td><td class="muted">January 20, 2022</td><td>$149.99</td>
+                  <td><span class="badge badge--approved">Approved</span></td>
+                </tr>
+                <tr>
+                  <td class="muted">F2349SU38</td><td>Macbook Air 2019</td><td>2</td><td class="muted">January 20, 2022</td><td>$1099.99</td>
+                  <td><span class="badge badge--cancelled">Cancelled</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
+        <!-- ===== RIGHT COLUMN ===== -->
+        <div class="column">
+
+          <!-- Alerts -->
+          <section class="card alerts">
+            <div class="alerts__head">
+              <h2>ALERTS</h2>
+              <a class="link-muted" href="#">Go to Inventory Hub Page <span>&rarr;</span></a>
+            </div>
+
+            <ul class="alert-list">
+              <li class="alert">
+                <img class="alert__img" src="images/pod-iv-max.png" alt="Vape Pod IV Max">
+                <div class="alert__name"><strong>Vape Pod IV Max</strong><span>Pod</span></div>
+                <div class="alert__bar"><div class="bar bar--red" style="--fill: 0%"></div><span>Stock Indicator</span></div>
+                <div class="alert__units"><b class="pill pill--teal">0 Units</b><span>Units Left</span></div>
+              </li>
+              <li class="alert">
+                <img class="alert__img" src="images/juice-x.png" alt="Vape Juice X">
+                <div class="alert__name"><strong>Vape Juice X</strong><span>Juice</span></div>
+                <div class="alert__bar"><div class="bar bar--red" style="--fill: 8%"></div><span>Stock Indicator</span></div>
+                <div class="alert__units"><b class="pill pill--green">3 Units</b><span>Units Left</span></div>
+              </li>
+              <li class="alert">
+                <img class="alert__img" src="images/juice-iii-y.png" alt="Vape Juice III Y">
+                <div class="alert__name"><strong>Vape Juice III Y</strong><span>Juice</span></div>
+                <div class="alert__bar"><div class="bar bar--red" style="--fill: 22%"></div><span>Stock Indicator</span></div>
+                <div class="alert__units"><b class="pill pill--purple">6 Units</b><span>Units Left</span></div>
+              </li>
+              <li class="alert">
+                <img class="alert__img" src="images/box-mod-v.png" alt="Vape Box Mod V">
+                <div class="alert__name"><strong>Vape Box Mod V</strong><span>Box Mod</span></div>
+                <div class="alert__bar"><div class="bar bar--orange" style="--fill: 28%"></div><span>Stock Indicator</span></div>
+                <div class="alert__units"><b class="pill pill--orange">8 Units</b><span>Units Left</span></div>
+              </li>
+              <li class="alert">
+                <img class="alert__img" src="images/pod-ii.png" alt="Vape Pod II">
+                <div class="alert__name"><strong>Vape Pod II</strong><span>Pod</span></div>
+                <div class="alert__bar"><div class="bar bar--orange" style="--fill: 36%"></div><span>Stock Indicator</span></div>
+                <div class="alert__units"><b class="pill pill--purple">10 Units</b><span>Units Left</span></div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Top selling -->
+          <section class="card top">
+            <h2 class="top__title">Top Selling Items</h2>
+            <p class="top__sub">Top Selling Items Based on Sales Data</p>
+
+            <div class="top__grid">
+              <div class="top-item"><span class="top-item__rank">#1</span><img src="images/pod-iv-max.png" alt=""><div><strong>Vape Pod IV Max</strong><span>Pod</span></div></div>
+              <div class="top-item"><span class="top-item__rank">#4</span><img src="images/pod-iv-max.png" alt=""><div><strong>Vape Pod IV Max</strong><span>Pod</span></div></div>
+              <div class="top-item"><span class="top-item__rank">#2</span><img src="images/juice-x.png" alt=""><div><strong>Vape Juice X</strong><span>Juice</span></div></div>
+              <div class="top-item"><span class="top-item__rank">#5</span><img src="images/juice-x.png" alt=""><div><strong>Vape Juice X</strong><span>Juice</span></div></div>
+              <div class="top-item"><span class="top-item__rank">#3</span><img src="images/box-mod-v.png" alt=""><div><strong>Vape Box Mod V</strong><span>Box Mod</span></div></div>
+              <div class="top-item"><span class="top-item__rank">#6</span><img src="images/box-mod-v.png" alt=""><div><strong>Vape Box Mod V</strong><span>Box Mod</span></div></div>
+            </div>
+          </section>
+        </div>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>

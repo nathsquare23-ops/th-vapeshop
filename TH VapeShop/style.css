@@ -1,0 +1,192 @@
+/* ---------- Basics ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #242424;
+  --white: #ffffff;
+  --blue: #1366d9;      /* button + link */
+  --brand-blue: #009ed8; /* "TH VAPESHOP" text */
+  --placeholder: #667085;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: "Inter", Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* ---------- Page layout: two columns ---------- */
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* ---------- Left: brand ---------- */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 78px 40px 40px 60px;
+}
+
+.brand__logo {
+  width: 360px;
+  max-width: 100%;
+  height: auto;
+}
+
+.brand__name {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  letter-spacing: 1px;
+  color: var(--brand-blue);
+}
+
+/* ---------- Right: login ---------- */
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 298px 144px 40px; /* matches the off-center spot in the design */
+}
+
+.login__box {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.login__icon {
+  width: 82px;
+  height: auto;
+  display: block;
+  margin: 0 auto 4px;
+}
+
+.login__title {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 0.92;
+  max-width: 400px;
+  margin: 0 auto 14px;
+}
+
+.login__subtitle {
+  font-size: 16px;
+  margin-bottom: 36px;
+}
+
+/* ---------- Form ---------- */
+.form {
+  text-align: left;
+}
+
+.form__label {
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.form__input {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  margin-bottom: 40px;
+  background: var(--white);
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  color: #101828;
+}
+
+.form__input::placeholder {
+  color: var(--placeholder);
+}
+
+.form__input:focus {
+  outline: 2px solid var(--blue);
+}
+
+.form__options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -18px;
+  margin-bottom: 36px;
+  font-size: 16px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.forgot {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: block;
+  width: 360px;
+  max-width: 100%;
+  height: 44px;
+  margin: 0 auto;
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+/* ---------- Tablets and phones: stack the columns ---------- */
+@media (max-width: 1100px) {
+  .page {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .brand {
+    padding: 48px 24px 0;
+  }
+
+  .brand__logo {
+    width: 200px;
+  }
+
+  .brand__name {
+    font-size: 30px;
+  }
+
+  .login {
+    padding: 32px 24px 48px;
+  }
+
+  .login__title {
+    font-size: 44px;
+  }
+}
