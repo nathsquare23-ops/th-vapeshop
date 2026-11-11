@@ -1,0 +1,187 @@
+/* Extra styles for the Edit Product List page.
+   The sidebar and top bar come from inventory.css. */
+
+.pl-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 17px 25px 24px 15px;
+}
+
+/* ---------- Go back + Filters ---------- */
+.pl-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.pl-back {
+  display: inline-block;
+  padding: 11px 30px;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 20px;
+  color: #333333;
+}
+
+.pl-back:hover {
+  background-color: #f3f3f3;
+}
+
+.pl-filters {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 44px;
+  margin-right: 3px;
+  padding: 0 22px;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #444444;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ---------- Table card ---------- */
+.pl-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pl-scroll {
+  overflow-x: auto;
+}
+
+.pl-table {
+  min-width: 1000px;
+}
+
+.pl-row {
+  display: grid;
+  grid-template-columns: 179fr 318fr 200fr 240fr 214fr 235fr 172fr;
+  align-items: center;
+  min-height: 135px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 22px;
+  color: #555555;
+  text-align: center;
+}
+
+.pl-row.last {
+  border-bottom: none;
+}
+
+.pl-head {
+  min-height: 71px;
+  border-bottom: 2px solid #cfcfcf;
+  font-weight: 600;
+  font-size: 24px;
+  color: #4b5563;
+}
+
+/* number + picture */
+.pl-first {
+  display: flex;
+  align-items: center;
+  padding-left: 17px;
+}
+
+.pl-num {
+  width: 34px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #333333;
+  text-align: left;
+}
+
+.pl-first img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* availability colors */
+.in  { color: #16a34a; }
+.out { color: #e11d1d; }
+.low { color: #f4c20d; }
+
+/* Edit Product button */
+.pl-action {
+  text-align: left;
+}
+
+.pl-edit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 54px;
+  border-radius: 4px;
+  background-color: #1565d8;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.pl-edit:hover {
+  background-color: #0f55b8;
+}
+
+/* ---------- Pagination ---------- */
+.pl-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0 40px 0 14px;
+}
+
+.pl-page-btn {
+  min-width: 157px;
+  height: 46px;
+  padding: 0 28px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.pl-page-btn:hover {
+  background-color: #f3f3f3;
+}
+
+.pl-page-text {
+  font-size: 24px;
+  color: #555555;
+}
+
+/* ---------- Smaller screens ---------- */
+@media (max-width: 900px) {
+  .pl-page {
+    padding: 16px;
+  }
+
+  .pl-back,
+  .pl-filters {
+    font-size: 16px;
+  }
+
+  .pl-pagination {
+    padding: 0;
+  }
+
+  .pl-page-btn,
+  .pl-page-text {
+    font-size: 16px;
+    min-width: 0;
+  }
+}

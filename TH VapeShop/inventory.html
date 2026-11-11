@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TH Vapeshop - Inventory Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="inventory.css">
+</head>
+<body>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="images/logo-small.png" alt="TH logo">
+      <span>TH Vapeshop</span>
+    </div>
+
+    <nav class="menu">
+      <a href="dashboard.html" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M11 3a9 9 0 1 0 9 9h-9V3z" fill="currentColor" stroke="none"/><path d="M14 2.5V10h7.5A8 8 0 0 0 14 2.5z" fill="currentColor" stroke="none"/></svg>
+        <span>Dashboard</span>
+      </a>
+      <a href="#" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6"/></svg>
+        <span>Sales Management</span>
+      </a>
+      <a href="inventory.html" class="menu-item active">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>
+        <span>Inventory Hub</span>
+      </a>
+      <a href="#" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6"/></svg>
+        <span>Sales Report</span>
+      </a>
+      <a href="#" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span>Settings</span>
+      </a>
+      <a href="activity-log.html" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>Recent Activities</span>
+      </a>
+    </nav>
+
+    <a href="index.html" class="menu-item signout">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+      <span>Sign Out</span>
+    </a>
+  </aside>
+
+  <!-- ================= MAIN AREA ================= -->
+  <div class="main">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="search">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search here...">
+      </div>
+
+      <button class="bell" type="button">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        <span class="dot"></span>
+      </button>
+
+      <div class="profile">
+        <img src="images/avatar.jpg" alt="Roroy Maur" class="avatar">
+        <div class="profile-text">
+          <strong>Roroy Maur</strong>
+          <span>Admin</span>
+        </div>
+        <span class="chevron">&#8964;</span>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+
+      <!-- Inventory summary -->
+      <section class="card hub">
+        <h1>Inventory Hub</h1>
+        <p class="sub">Stock Summary</p>
+
+        <div class="stats">
+          <div class="stat"><p class="num">894</p><p class="label">Total Units</p></div>
+          <div class="stat"><p class="num">24</p><p class="label">Products</p></div>
+          <div class="stat"><p class="num">5</p><p class="label">Low Stock</p></div>
+          <div class="stat"><p class="num">3</p><p class="label">Out of Stock</p></div>
+        </div>
+      </section>
+
+      <!-- Stock distribution -->
+      <section class="card distribution">
+        <h2>Stock Distribution</h2>
+
+        <div class="dist-row juice">
+          <div class="dist-text"><span>Juice</span><span>45%</span></div>
+          <div class="bar"><div class="fill" style="width: 47%"></div></div>
+        </div>
+        <div class="dist-row cartridges">
+          <div class="dist-text"><span>Cartridges</span><span>7%</span></div>
+          <div class="bar"><div class="fill" style="width: 12%"></div></div>
+        </div>
+        <div class="dist-row pods">
+          <div class="dist-text"><span>Pods</span><span>18%</span></div>
+          <div class="bar"><div class="fill" style="width: 24%"></div></div>
+        </div>
+        <div class="dist-row mods">
+          <div class="dist-text"><span>Variable Mods</span><span>30%</span></div>
+          <div class="bar"><div class="fill" style="width: 34%"></div></div>
+        </div>
+      </section>
+
+      <!-- Products table -->
+      <section class="card products">
+        <div class="products-head">
+          <h2>Products</h2>
+          <div class="actions">
+            <button type="button" class="btn-blue">Add Product</button>
+            <a href="edit-product-list.html" class="btn-blue">Edit Product</a>
+            <button type="button" class="btn-filter">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+              Filters
+            </button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th class="left">Products</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Variation</th>
+                <th>Quantity</th>
+                <th>Availability</th>
+                <th>Create Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="left"><a href="product-overview.html" class="product-link">Vape Juice X</a></td>
+                <td>Juice</td>
+                <td>₱1000</td>
+                <td>salt nic, 30ml</td>
+                <td>43</td>
+                <td class="in">In- stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="product-overview.html" class="product-link">Vape Variable Mod 1</a></td>
+                <td>Variable Mod</td>
+                <td>₱1000</td>
+                <td></td>
+                <td>22</td>
+                <td class="out">Out of stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="product-overview.html" class="product-link">Vape Juice X</a></td>
+                <td>Juice</td>
+                <td>₱1000</td>
+                <td>free base, 120ml</td>
+                <td>36</td>
+                <td class="in">In- stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="product-overview.html" class="product-link">Vape Pod 2</a></td>
+                <td>Pod</td>
+                <td>₱1000</td>
+                <td>.8 ohms</td>
+                <td>14</td>
+                <td class="out">Out of stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="product-overview.html" class="product-link">Vape Juice Z</a></td>
+                <td>Juice</td>
+                <td>₱1000</td>
+                <td>salt nic, 60ml</td>
+                <td>5</td>
+                <td class="in">In- stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="product-overview.html" class="product-link">Vape Variable Mod 3</a></td>
+                <td>Variable Mod</td>
+                <td>₱1000</td>
+                <td></td>
+                <td>10</td>
+                <td class="in">In- stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="product-overview.html" class="product-link">Vape Pod 1</a></td>
+                <td>Pod</td>
+                <td>₱1000</td>
+                <td>.4 ohms</td>
+                <td>23</td>
+                <td class="out">Out of stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="product-overview.html" class="product-link">Vape Cartridge 1</a></td>
+                <td>Cartridge</td>
+                <td>₱1000</td>
+                <td></td>
+                <td>43</td>
+                <td class="in">In- stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="product-overview.html" class="product-link">Vape Pod 1</a></td>
+                <td>Pod</td>
+                <td>₱1000</td>
+                <td>.6 ohms</td>
+                <td>41</td>
+                <td class="low">Low stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <button type="button" class="page-btn">Previous</button>
+          <span>Page 1 of 10</span>
+          <button type="button" class="page-btn">Next</button>
+        </div>
+      </section>
+
+      <!-- Recent activities -->
+      <section class="card activities">
+        <div class="act-head">
+          <h2>Recent Activities</h2>
+          <a href="activity-log.html">Go to Recent Activities Page &rarr;</a>
+        </div>
+
+        <ul>
+          <li>
+            <img src="images/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the price of the product Vape Pod X from <u>₱500</u> to <u>₱550</u></span>
+            <span class="time">10 secs ago</span>
+          </li>
+          <li class="shade">
+            <img src="images/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the price of the product Vape Pod Y from <u>₱600</u> to <u>₱650</u></span>
+            <span class="time">1 min ago</span>
+          </li>
+          <li>
+            <img src="images/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the price of the product Vape Pod Z from <u>₱700</u> to <u>₱750</u></span>
+            <span class="time">59 min ago</span>
+          </li>
+          <li class="shade">
+            <img src="images/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the description of the product Vape Pod Y</span>
+            <span class="time">12 hours ago</span>
+          </li>
+          <li>
+            <img src="images/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the stock of the product Vape Body Mod XS Pro Max from <u>10</u> to <u>15</u></span>
+            <span class="time">1 day ago</span>
+          </li>
+          <li class="shade">
+            <img src="images/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the product name of the product Vape Body Mod SX Max Pro to Vape Body Mod XS Pro Max</span>
+            <span class="time">1 month ago</span>
+          </li>
+          <li>
+            <img src="images/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the description of the product Vape Body Mod SX Max Pro</span>
+            <span class="time">1 month ago</span>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="fit-screen.js"></script>
+
+</body>
+</html>

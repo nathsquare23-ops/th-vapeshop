@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TH Vapeshop - Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="images/logo-small.png" alt="TH logo">
+      <span>TH Vapeshop</span>
+    </div>
+
+    <nav class="menu">
+      <a href="dashboard.html" class="menu-item active">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M11 3a9 9 0 1 0 9 9h-9V3z" fill="currentColor" stroke="none"/><path d="M14 2.5V10h7.5A8 8 0 0 0 14 2.5z" fill="currentColor" stroke="none"/></svg>
+        <span>Dashboard</span>
+      </a>
+      <a href="#" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6"/></svg>
+        <span>Sales Management</span>
+      </a>
+      <a href="inventory.html" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>
+        <span>Inventory Hub</span>
+      </a>
+      <a href="#" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6"/></svg>
+        <span>Sales Report</span>
+      </a>
+      <a href="#" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span>Settings</span>
+      </a>
+      <a href="activity-log.html" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>Recent Activities</span>
+      </a>
+    </nav>
+
+    <a href="index.html" class="menu-item signout">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+      <span>Sign Out</span>
+    </a>
+  </aside>
+
+  <!-- ================= MAIN AREA ================= -->
+  <div class="main">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <h1>Dashboard</h1>
+
+      <div class="search">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search here...">
+      </div>
+
+      <button class="bell" type="button">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        <span class="dot"></span>
+      </button>
+
+      <div class="profile">
+        <img src="images/avatar.jpg" alt="Roroy Maur" class="avatar">
+        <div class="profile-text">
+          <strong>Roroy Maur</strong>
+          <span>Admin</span>
+        </div>
+        <span class="chevron">&#8964;</span>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+
+      <!-- LEFT COLUMN -->
+      <div class="column">
+
+        <!-- Sales + Stock summary -->
+        <section class="card">
+          <h2 class="card-title">Today’s Sales | October 27, 2026</h2>
+          <p class="card-sub">Sales Summary</p>
+
+          <div class="stats">
+            <div class="stat">
+              <p class="stat-label">Total Sales</p>
+              <p class="stat-value">₱2,905.60</p>
+              <p class="stat-note">+8% from yesterday</p>
+            </div>
+            <div class="stat">
+              <p class="stat-label">Total Orders</p>
+              <p class="stat-value">24</p>
+              <p class="stat-note">+10% from yesterday</p>
+            </div>
+            <div class="stat">
+              <p class="stat-label">Product Sold</p>
+              <p class="stat-value">17</p>
+              <p class="stat-note">+20% from yesterday</p>
+            </div>
+          </div>
+
+          <h2 class="card-title second">Today’s Stock | October 27, 2026</h2>
+          <p class="card-sub">Stock Summary</p>
+
+          <div class="stats">
+            <div class="stat">
+              <p class="stat-label">Individual Units Available</p>
+              <p class="stat-value">178</p>
+            </div>
+            <div class="stat">
+              <p class="stat-label">Products Needing Attention</p>
+              <p class="stat-value">4</p>
+            </div>
+            <div class="stat">
+              <p class="stat-label">Products with Zero Stock</p>
+              <p class="stat-value">1</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Recent orders -->
+        <section class="card orders">
+          <div class="card-head">
+            <h3>Recent Orders</h3>
+            <a href="#" class="go-link">Go to Sales Management Page &rarr;</a>
+          </div>
+          <p class="new-order">+1 new order</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Order Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="muted">I293DSA39</td>
+                <td>Iphone 13</td>
+                <td>4</td>
+                <td class="muted">January 20, 2022</td>
+                <td>$799.00</td>
+                <td><span class="badge pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td class="muted">U2349SD12</td>
+                <td>Xiaomi Redmi Note 10</td>
+                <td>1</td>
+                <td class="muted">January 20, 2022</td>
+                <td>$149.99</td>
+                <td><span class="badge approved">Approved</span></td>
+              </tr>
+              <tr>
+                <td class="muted">F2349SU38</td>
+                <td>Macbook Air 2019</td>
+                <td>2</td>
+                <td class="muted">January 20, 2022</td>
+                <td>$1099.99</td>
+                <td><span class="badge cancelled">Cancelled</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="column">
+
+        <!-- Alerts -->
+        <section class="card alerts">
+          <div class="card-head alerts-head">
+            <h2>ALERTS</h2>
+            <a href="inventory.html" class="go-link">Go to Inventory Hub Page &rarr;</a>
+          </div>
+
+          <div class="alert-row">
+            <img src="images/vape-pod-iv-max.png" alt="Vape Pod IV Max" class="alert-img">
+            <div class="alert-info">
+              <p class="alert-name">Vape Pod IV Max</p>
+              <p class="alert-type">Pod</p>
+            </div>
+            <div class="alert-bar red"><div class="fill" style="width: 0%"></div><p>Stock Indicator</p></div>
+            <div class="alert-units red"><span class="units-badge">0 Units</span><p>Units Left</p></div>
+          </div>
+
+          <div class="alert-row">
+            <img src="images/vape-juice-x.png" alt="Vape Juice X" class="alert-img">
+            <div class="alert-info">
+              <p class="alert-name">Vape Juice X (30ml)</p>
+              <p class="alert-type">Juice</p>
+            </div>
+            <div class="alert-bar red"><div class="fill" style="width: 8%"></div><p>Stock Indicator</p></div>
+            <div class="alert-units red"><span class="units-badge">3 Units</span><p>Units Left</p></div>
+          </div>
+
+          <div class="alert-row">
+            <img src="images/vape-juice-iii-y.png" alt="Vape Juice III Y" class="alert-img">
+            <div class="alert-info">
+              <p class="alert-name">Vape Juice III Y</p>
+              <p class="alert-type">Juice</p>
+            </div>
+            <div class="alert-bar red"><div class="fill" style="width: 22%"></div><p>Stock Indicator</p></div>
+            <div class="alert-units red"><span class="units-badge">6 Units</span><p>Units Left</p></div>
+          </div>
+
+          <div class="alert-row">
+            <img src="images/vape-box-mod-v.png" alt="Vape Box Mod V" class="alert-img">
+            <div class="alert-info">
+              <p class="alert-name">Vape Box Mod V</p>
+              <p class="alert-type">Variable Mod</p>
+            </div>
+            <div class="alert-bar orange"><div class="fill" style="width: 28%"></div><p>Stock Indicator</p></div>
+            <div class="alert-units orange"><span class="units-badge">8 Units</span><p>Units Left</p></div>
+          </div>
+
+          <div class="alert-row">
+            <img src="images/vape-pod-ii.png" alt="Vape Pod II" class="alert-img">
+            <div class="alert-info">
+              <p class="alert-name">Vape Pod II</p>
+              <p class="alert-type">Pod</p>
+            </div>
+            <div class="alert-bar orange"><div class="fill" style="width: 36%"></div><p>Stock Indicator</p></div>
+            <div class="alert-units orange"><span class="units-badge">10 Units</span><p>Units Left</p></div>
+          </div>
+        </section>
+
+        <!-- Top selling -->
+        <section class="card top-selling">
+          <h2 class="card-title">Top Selling Items</h2>
+          <p class="card-sub">Top Selling Items Based on Sales Data</p>
+
+          <div class="top-grid">
+            <div class="top-item">
+              <span class="rank">#1</span>
+              <img src="images/vape-pod-iv-max.png" alt="">
+              <div><p class="top-name">Vape Pod IV Max</p><p class="top-type">Pod</p></div>
+            </div>
+            <div class="top-item">
+              <span class="rank">#4</span>
+              <img src="images/vape-pod-iv-max.png" alt="">
+              <div><p class="top-name">Vape Pod IV Max</p><p class="top-type">Pod</p></div>
+            </div>
+
+            <div class="top-item">
+              <span class="rank">#2</span>
+              <img src="images/vape-juice-x.png" alt="">
+              <div><p class="top-name">Vape Juice X</p><p class="top-type">Juice</p></div>
+            </div>
+            <div class="top-item">
+              <span class="rank">#5</span>
+              <img src="images/vape-juice-x.png" alt="">
+              <div><p class="top-name">Vape Juice X</p><p class="top-type">Juice</p></div>
+            </div>
+
+            <div class="top-item">
+              <span class="rank">#3</span>
+              <img src="images/vape-box-mod-v.png" alt="">
+              <div><p class="top-name">Vape Box Mod V</p><p class="top-type">Box Mod</p></div>
+            </div>
+            <div class="top-item">
+              <span class="rank">#6</span>
+              <img src="images/vape-box-mod-v.png" alt="">
+              <div><p class="top-name">Vape Box Mod V</p><p class="top-type">Box Mod</p></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="fit-screen.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+/* Extra styles for the Activity Log page.
+   The sidebar and top bar come from inventory.css. */
+
+/* page title in the top bar */
+.topbar {
+  padding-left: 43px;
+}
+
+.topbar h1 {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 46px;
+  color: #ffffff;
+}
+
+/* ---------- Page and card ---------- */
+.al-page {
+  flex: 1;
+  display: flex;
+  padding: 37px 49px 41px 47px;
+}
+
+.al-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding-bottom: 24px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+/* ---------- Search + Filters ---------- */
+.al-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 90px;
+  padding: 29px 39px 0 400px;
+}
+
+.al-search {
+  flex: 0 0 716px;
+  max-width: 100%;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 26px;
+  border-radius: 18px;
+  background-color: #dcdcdc;
+}
+
+.al-search .icon {
+  width: 26px;
+  height: 26px;
+  color: #5b63f0;
+}
+
+.al-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: #333333;
+}
+
+.al-search input::placeholder {
+  color: #777777;
+}
+
+.al-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 160px;
+  height: 45px;
+  margin-top: 5px;
+  border: 1px solid #d4d4d4;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #444444;
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ---------- Table rows ---------- */
+.al-row {
+  display: grid;
+  grid-template-columns: 526fr 550fr 406fr;
+  align-items: center;
+}
+
+.al-head {
+  padding-right: 16px;
+  height: 36px;
+  border-bottom: 2px solid #dddddd;
+  font-weight: 600;
+  font-size: 24px;
+  color: #4b5563;
+}
+
+.al-head .c-user {
+  padding-left: 119px;
+}
+
+.al-head .c-activity {
+  text-align: center;
+}
+
+.al-head .c-date {
+  padding-left: 112px;
+  text-align: center;
+}
+
+.al-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  border-bottom: 2px solid #dddddd;
+}
+
+.al-list .al-row {
+  min-height: 107px;
+}
+
+.al-list .al-row.shade {
+  background-color: #e1e1e1;
+}
+
+.al-list .c-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 12px;
+}
+
+.al-list .c-user img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.al-list .c-user span {
+  font-size: 22px;
+  color: #555555;
+}
+
+.al-list .c-activity {
+  font-size: 22px;
+  line-height: 20px;
+  color: #555555;
+  text-align: left;
+}
+
+.al-list .c-date {
+  padding-left: 112px;
+  font-size: 18px;
+  color: #555555;
+  text-align: center;
+}
+
+/* ---------- Smaller screens ---------- */
+@media (max-width: 1250px) {
+  .al-top {
+    padding-left: 39px;
+    gap: 20px;
+  }
+
+  .al-search {
+    flex: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    padding-left: 16px;
+  }
+
+  .topbar h1 {
+    font-size: 32px;
+  }
+
+  .al-page {
+    padding: 16px;
+  }
+
+  .al-top {
+    padding: 20px 16px 0;
+  }
+
+  .al-card {
+    overflow-x: auto;
+  }
+
+  .al-head,
+  .al-list {
+    min-width: 900px;
+  }
+}

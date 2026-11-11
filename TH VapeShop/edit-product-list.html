@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TH Vapeshop - Edit Product List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- inventory.css holds the sidebar and top bar styles shared by these pages -->
+  <link rel="stylesheet" href="inventory.css">
+  <link rel="stylesheet" href="edit-product-list.css">
+</head>
+<body>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="images/logo-small.png" alt="TH logo">
+      <span>TH Vapeshop</span>
+    </div>
+
+    <nav class="menu">
+      <a href="dashboard.html" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M11 3a9 9 0 1 0 9 9h-9V3z" fill="currentColor" stroke="none"/><path d="M14 2.5V10h7.5A8 8 0 0 0 14 2.5z" fill="currentColor" stroke="none"/></svg>
+        <span>Dashboard</span>
+      </a>
+      <a href="#" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6"/></svg>
+        <span>Sales Management</span>
+      </a>
+      <a href="inventory.html" class="menu-item active">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>
+        <span>Inventory Hub</span>
+      </a>
+      <a href="#" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6"/></svg>
+        <span>Sales Report</span>
+      </a>
+      <a href="#" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span>Settings</span>
+      </a>
+      <a href="activity-log.html" class="menu-item">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>Recent Activities</span>
+      </a>
+    </nav>
+
+    <a href="index.html" class="menu-item signout">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+      <span>Sign Out</span>
+    </a>
+  </aside>
+
+  <!-- ================= MAIN AREA ================= -->
+  <div class="main">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="search">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search here...">
+      </div>
+
+      <button class="bell" type="button">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        <span class="dot"></span>
+      </button>
+
+      <div class="profile">
+        <img src="images/avatar.jpg" alt="Roroy Maur" class="avatar">
+        <div class="profile-text">
+          <strong>Roroy Maur</strong>
+          <span>Admin</span>
+        </div>
+        <span class="chevron">&#8964;</span>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <main class="pl-page">
+
+      <div class="pl-top">
+        <a href="inventory.html" class="pl-back">Go back</a>
+        <button type="button" class="pl-filters">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+          Filters
+        </button>
+      </div>
+
+      <section class="pl-card">
+        <div class="pl-scroll">
+          <div class="pl-table">
+
+            <div class="pl-row pl-head">
+              <span></span>
+              <span>Product Name</span>
+              <span>Category</span>
+              <span>Price</span>
+              <span>Quantity</span>
+              <span>Availability</span>
+              <span></span>
+            </div>
+
+            <div class="pl-row">
+              <div class="pl-first"><span class="pl-num">1.</span><img src="images/vape-pod-iv-max.png" alt=""></div>
+              <span>Vape na Pod Pro Max XS</span>
+              <span>Juice</span>
+              <span>₱1000</span>
+              <span>43</span>
+              <span class="in">In- stock</span>
+              <div class="pl-action"><a href="edit-product.html" class="pl-edit">Edit Product</a></div>
+            </div>
+
+            <div class="pl-row">
+              <div class="pl-first"><span class="pl-num">2.</span><img src="images/vape-pod-iv-max.png" alt=""></div>
+              <span>Vape na Pod Pro Max XS</span>
+              <span>Juice</span>
+              <span>₱1000</span>
+              <span>43</span>
+              <span class="out">Out of stock</span>
+              <div class="pl-action"><a href="edit-product.html" class="pl-edit">Edit Product</a></div>
+            </div>
+
+            <div class="pl-row">
+              <div class="pl-first"><span class="pl-num">3.</span><img src="images/vape-pod-iv-max.png" alt=""></div>
+              <span>Vape na Pod Pro Max XS</span>
+              <span>Juice</span>
+              <span>₱1000</span>
+              <span>43</span>
+              <span class="out">Out of stock</span>
+              <div class="pl-action"><a href="edit-product.html" class="pl-edit">Edit Product</a></div>
+            </div>
+
+            <div class="pl-row">
+              <div class="pl-first"><span class="pl-num">4.</span><img src="images/vape-pod-iv-max.png" alt=""></div>
+              <span>Vape na Pod Pro Max XS</span>
+              <span>Juice</span>
+              <span>₱1000</span>
+              <span>43</span>
+              <span class="low">Low stock</span>
+              <div class="pl-action"><a href="edit-product.html" class="pl-edit">Edit Product</a></div>
+            </div>
+
+            <div class="pl-row last">
+              <div class="pl-first"><span class="pl-num">5.</span><img src="images/vape-pod-iv-max.png" alt=""></div>
+              <span>Vape na Pod Pro Max XS</span>
+              <span>Juice</span>
+              <span>₱1000</span>
+              <span>43</span>
+              <span class="low">Low stock</span>
+              <div class="pl-action"><a href="edit-product.html" class="pl-edit">Edit Product</a></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <div class="pl-pagination">
+        <button type="button" class="pl-page-btn">Previous</button>
+        <span class="pl-page-text">Page 1 of 10</span>
+        <button type="button" class="pl-page-btn">Next</button>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="fit-screen.js"></script>
+
+</body>
+</html>

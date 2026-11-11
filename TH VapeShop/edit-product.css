@@ -1,0 +1,340 @@
+/* Extra styles for the Edit Product page.
+   The sidebar and top bar come from inventory.css. */
+
+.ep-page {
+  flex: 1;
+  display: flex;
+  padding: 86px 47px 42px 59px;
+}
+
+.ep-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+/* ---------- Header ---------- */
+.ep-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 141px;
+  padding: 17px 27px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.ep-header h1 {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 55px;
+  color: #444444;
+}
+
+.ep-buttons {
+  display: flex;
+  gap: 48px;
+}
+
+.btn-cancel,
+.btn-save {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 139px;
+  height: 55px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.btn-cancel {
+  border: 1px solid #e11d1d;
+  background-color: #ffffff;
+  color: #e11d1d;
+}
+
+.btn-cancel:hover {
+  background-color: #fff1f1;
+}
+
+.btn-save {
+  background-color: #1565d8;
+  color: #ffffff;
+}
+
+.btn-save:hover {
+  background-color: #0f55b8;
+}
+
+/* ---------- Body layout ---------- */
+.ep-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  padding: 14px 20px 30px 27px;
+  gap: 20px;
+}
+
+.ep-h {
+  font-weight: 600;
+  font-size: 24px;
+  color: #4b5563;
+}
+
+/* ---------- Left: primary details ---------- */
+.ep-photo {
+  margin: 10px 0 36px;
+}
+
+.ep-photo img {
+  display: block;
+  width: 110px;
+  height: 110px;
+  margin-left: 30px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.photo-links {
+  display: flex;
+  gap: 32px;
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.upload {
+  color: #1d5fd6;
+  text-decoration: underline;
+}
+
+.remove {
+  color: #f87171;
+  text-decoration: underline;
+}
+
+.ep-form {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 274px minmax(0, 414px);
+  align-items: center;
+}
+
+.field.top {
+  align-items: start;
+}
+
+.field label {
+  font-size: 20px;
+  color: #777777;
+}
+
+.field.top label {
+  padding-top: 4px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  height: 49px;
+  padding: 0 12px;
+  border: 1.5px solid #333333;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: #222222;
+}
+
+.field textarea {
+  height: 153px;
+  padding: 8px 12px;
+  line-height: 1;
+  resize: vertical;
+}
+
+/* ---------- Right: price, stock, alert ---------- */
+.ep-right .ep-h {
+  margin-top: 4px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 231px 1fr;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.row.adjust {
+  margin-top: 14px;
+}
+
+.r-label {
+  font-size: 20px;
+  color: #777777;
+}
+
+.r-label.bold {
+  font-weight: 600;
+  color: #666666;
+}
+
+.r-label.low {
+  color: #f5b800;
+}
+
+.r-value {
+  margin-left: 30px;
+  font-size: 20px;
+  color: #777777;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.step svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: #222222;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.step:hover svg {
+  stroke: #1565d8;
+}
+
+.stepper input {
+  height: 37px;
+  padding: 0 10px;
+  border: 1.5px solid #333333;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: #222222;
+}
+
+.stepper input.wide {
+  width: 170px;
+}
+
+.stepper input.narrow {
+  width: 73px;
+}
+
+/* hide the browser's own up/down arrows inside number boxes */
+.stepper input::-webkit-outer-spin-button,
+.stepper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.stepper input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.ep-right hr {
+  width: 458px;
+  max-width: 100%;
+  margin: 22px 0 26px;
+  border: none;
+  border-top: 3px solid #e5e5e5;
+}
+
+.alert-row {
+  grid-template-columns: 221px 1fr;
+}
+
+.info {
+  display: flex;
+  gap: 8px;
+  margin-top: 28px;
+  font-size: 20px;
+  line-height: 34px;
+  color: #a3a3a3;
+}
+
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background-color: #b5b5b5;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ---------- Smaller screens ---------- */
+@media (max-width: 1250px) {
+  .ep-body {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ep-page {
+    padding: 16px;
+  }
+
+  .ep-header {
+    flex-direction: column;
+    gap: 14px;
+    height: auto;
+    padding: 20px 16px;
+  }
+
+  .ep-header h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .ep-buttons {
+    gap: 16px;
+  }
+
+  .ep-body {
+    padding: 14px 16px 24px;
+  }
+
+  .field {
+    grid-template-columns: 1fr;
+    row-gap: 6px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    row-gap: 6px;
+  }
+
+  .r-value {
+    margin-left: 0;
+  }
+}

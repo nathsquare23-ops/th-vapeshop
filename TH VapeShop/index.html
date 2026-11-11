@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TH Vapeshop - Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LEFT SIDE: big logo -->
+  <section class="left">
+    <img src="images/logo-big.png" alt="TH Vapeshop logo" class="logo-big">
+    <h2 class="brand-name">TH VAPESHOP</h2>
+  </section>
+
+  <!-- RIGHT SIDE: login form -->
+  <section class="right">
+    <div class="login-box">
+      <img src="images/logo-small.png" alt="TH logo" class="logo-small">
+      <h1>Log in to your account</h1>
+      <p class="subtitle">Welcome back! Please enter your details.</p>
+
+      <form action="dashboard.html" method="get">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" value="12345678">
+
+        <div class="options">
+          <label class="remember">
+            <input type="checkbox" name="remember">
+            Remember for 30 days
+          </label>
+          <a href="#" class="forgot">Forgot password</a>
+        </div>
+
+        <button type="submit">Sign in</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="fit-screen.js"></script>
+
+</body>
+</html>
