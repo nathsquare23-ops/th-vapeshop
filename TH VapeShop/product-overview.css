@@ -1,0 +1,149 @@
+/* Extra styles for the Product Overview page.
+   The sidebar and top bar come from inventory.css.
+   The Go back button, card and tabs come from product-history.css. */
+
+/* ---------- Title + Edit button ---------- */
+.ov-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.btn-edit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 137px;
+  height: 53px;
+  margin: 18px 28px 0 0;
+  border-radius: 4px;
+  background-color: #1565d8;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.btn-edit:hover {
+  background-color: #0f55b8;
+}
+
+.btn-edit svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---------- Body layout ---------- */
+.ov-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px 280px;
+  gap: 26px;
+  align-items: start;
+  padding: 38px 24px 40px 27px;
+}
+
+.ov-h {
+  font-weight: 500;
+  font-size: 24px;
+  color: #4b5563;
+}
+
+/* ---------- Details list ---------- */
+.ov-list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-top: 34px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 289px minmax(0, 1fr);
+  align-items: center;
+}
+
+.item.top {
+  align-items: start;
+}
+
+.item .k,
+.side-row .k {
+  font-size: 20px;
+  color: #777777;
+}
+
+.item .v,
+.side-row .v {
+  font-size: 20px;
+  color: #777777;
+}
+
+.item .bar {
+  margin: 0 4px;
+}
+
+.desc {
+  max-width: 390px;
+  line-height: 1;
+}
+
+/* ---------- Photo and side info ---------- */
+.ov-photo {
+  display: block;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.ov-side {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 14px;
+}
+
+.side-row {
+  display: grid;
+  grid-template-columns: 188px 1fr;
+  align-items: center;
+}
+
+/* ---------- Smaller screens ---------- */
+@media (max-width: 1250px) {
+  .ov-body {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ov-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .btn-edit {
+    margin: 0 0 0 28px;
+  }
+
+  .ov-body {
+    padding: 24px 16px;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+
+  .ov-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
