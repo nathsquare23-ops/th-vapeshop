@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Account Information | TH Vapeshop</title>
+  <link rel="stylesheet" href="../css/settings-admin-account-information.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/fit-screen.js" defer></script>
+<script src="../js/app.js" defer></script>
+</head>
+<body>
+  
+
+  
+
+  <main class="main-content">
+    <section class="account-card">
+      <div class="card-top-line"></div>
+
+      <a class="back-button" href="../pages/settings.html">Go back</a>
+
+      <div class="profile-heading">
+        <img class="profile-picture" src="../assets/avatar.jpg" alt="Account profile picture">
+        <div class="profile-name">Natalie M. Perello</div>
+        <div class="profile-email">NatPerello@gmail.com</div>
+      </div>
+
+      <form id="accountForm" class="account-form">
+        <div class="form-column">
+          <label class="field">
+            <span>Full Name</span>
+            <input type="text" name="fullName" placeholder="Your First Name">
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="Your Email Address">
+          </label>
+
+          <label class="field">
+            <span>Phone Number</span>
+            <input type="tel" name="phone" placeholder="Your Phone Number">
+          </label>
+
+          <label class="field">
+            <span>Address</span>
+            <input type="text" name="address" placeholder="Your Address">
+          </label>
+        </div>
+
+        <div class="form-column">
+          <label class="field">
+            <span>Username</span>
+            <input type="text" name="username" placeholder="Enter Username">
+          </label>
+
+          <label class="field">
+            <span>Old Password</span>
+            <input type="password" name="oldPassword" placeholder="Enter Old Password">
+          </label>
+
+          <label class="field">
+            <span>New Password*</span>
+            <input type="password" name="newPassword" placeholder="Enter New Password">
+          </label>
+
+          <label class="field">
+            <span>Confirm Password*</span>
+            <input type="password" name="confirmPassword" placeholder="Confirm New Password">
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button class="save-button" type="submit">Save Changes</button>
+          <p class="form-message" id="formMessage" role="status"></p>
+        </div>
+      </form>
+
+      <div class="card-bottom-line"></div>
+    </section>
+  </main>
+
+  <script src="../js/settings-admin-account-information.js"></script>
+</body>
+</html>

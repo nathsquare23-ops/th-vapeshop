@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TH Vapeshop - Inventory Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/inventory.css">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/fit-screen.js" defer></script>
+<script src="../js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= SIDEBAR ================= -->
+  
+
+  <!-- ================= MAIN AREA ================= -->
+  <div class="main">
+
+    <!-- Top bar -->
+    
+
+    <!-- Content -->
+    <main class="content">
+
+      <!-- Inventory summary -->
+      <section class="card hub">
+        <h1>Inventory Hub</h1>
+        <p class="sub">Stock Summary</p>
+
+        <div class="stats">
+          <div class="stat"><p class="num">894</p><p class="label">Total Units</p></div>
+          <div class="stat"><p class="num">24</p><p class="label">Products</p></div>
+          <div class="stat"><p class="num">5</p><p class="label">Low Stock</p></div>
+          <div class="stat"><p class="num">3</p><p class="label">Out of Stock</p></div>
+        </div>
+      </section>
+
+      <!-- Stock distribution -->
+      <section class="card distribution">
+        <h2>Stock Distribution</h2>
+
+        <div class="dist-row juice">
+          <div class="dist-text"><span>Juice</span><span>45%</span></div>
+          <div class="bar"><div class="fill" style="width: 47%"></div></div>
+        </div>
+        <div class="dist-row cartridges">
+          <div class="dist-text"><span>Cartridges</span><span>7%</span></div>
+          <div class="bar"><div class="fill" style="width: 12%"></div></div>
+        </div>
+        <div class="dist-row pods">
+          <div class="dist-text"><span>Pods</span><span>18%</span></div>
+          <div class="bar"><div class="fill" style="width: 24%"></div></div>
+        </div>
+        <div class="dist-row mods">
+          <div class="dist-text"><span>Variable Mods</span><span>30%</span></div>
+          <div class="bar"><div class="fill" style="width: 34%"></div></div>
+        </div>
+      </section>
+
+      <!-- Products table -->
+      <section class="card products">
+        <div class="products-head">
+          <h2>Products</h2>
+          <div class="actions">
+            <button type="button" class="btn-blue">Add Product</button>
+            <a href="../pages/edit-product-list.html" class="btn-blue">Edit Product</a>
+            <button type="button" class="btn-filter">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+              Filters
+            </button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th class="left">Products</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Variation</th>
+                <th>Quantity</th>
+                <th>Availability</th>
+                <th>Create Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="left"><a href="../pages/product-overview.html" class="product-link">Vape Juice X</a></td>
+                <td>Juice</td>
+                <td>₱1000</td>
+                <td>salt nic, 30ml</td>
+                <td>43</td>
+                <td class="in">In- stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="../pages/product-overview.html" class="product-link">Vape Variable Mod 1</a></td>
+                <td>Variable Mod</td>
+                <td>₱1000</td>
+                <td></td>
+                <td>22</td>
+                <td class="out">Out of stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="../pages/product-overview.html" class="product-link">Vape Juice X</a></td>
+                <td>Juice</td>
+                <td>₱1000</td>
+                <td>free base, 120ml</td>
+                <td>36</td>
+                <td class="in">In- stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="../pages/product-overview.html" class="product-link">Vape Pod 2</a></td>
+                <td>Pod</td>
+                <td>₱1000</td>
+                <td>.8 ohms</td>
+                <td>14</td>
+                <td class="out">Out of stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="../pages/product-overview.html" class="product-link">Vape Juice Z</a></td>
+                <td>Juice</td>
+                <td>₱1000</td>
+                <td>salt nic, 60ml</td>
+                <td>5</td>
+                <td class="in">In- stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="../pages/product-overview.html" class="product-link">Vape Variable Mod 3</a></td>
+                <td>Variable Mod</td>
+                <td>₱1000</td>
+                <td></td>
+                <td>10</td>
+                <td class="in">In- stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="../pages/product-overview.html" class="product-link">Vape Pod 1</a></td>
+                <td>Pod</td>
+                <td>₱1000</td>
+                <td>.4 ohms</td>
+                <td>23</td>
+                <td class="out">Out of stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="../pages/product-overview.html" class="product-link">Vape Cartridge 1</a></td>
+                <td>Cartridge</td>
+                <td>₱1000</td>
+                <td></td>
+                <td>43</td>
+                <td class="in">In- stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+              <tr>
+                <td class="left"><a href="../pages/product-overview.html" class="product-link">Vape Pod 1</a></td>
+                <td>Pod</td>
+                <td>₱1000</td>
+                <td>.6 ohms</td>
+                <td>41</td>
+                <td class="low">Low stock</td>
+                <td class="date">September 11, 2001</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <button type="button" class="page-btn">Previous</button>
+          <span>Page 1 of 10</span>
+          <button type="button" class="page-btn">Next</button>
+        </div>
+      </section>
+
+      <!-- Recent activities -->
+      <section class="card activities">
+        <div class="act-head">
+          <h2>Recent Activities</h2>
+          <a href="../pages/activity-log.html">Go to Recent Activities Page &rarr;</a>
+        </div>
+
+        <ul>
+          <li>
+            <img src="../assets/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the price of the product Vape Pod X from <u>₱500</u> to <u>₱550</u></span>
+            <span class="time">10 secs ago</span>
+          </li>
+          <li class="shade">
+            <img src="../assets/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the price of the product Vape Pod Y from <u>₱600</u> to <u>₱650</u></span>
+            <span class="time">1 min ago</span>
+          </li>
+          <li>
+            <img src="../assets/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the price of the product Vape Pod Z from <u>₱700</u> to <u>₱750</u></span>
+            <span class="time">59 min ago</span>
+          </li>
+          <li class="shade">
+            <img src="../assets/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the description of the product Vape Pod Y</span>
+            <span class="time">12 hours ago</span>
+          </li>
+          <li>
+            <img src="../assets/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the stock of the product Vape Body Mod XS Pro Max from <u>10</u> to <u>15</u></span>
+            <span class="time">1 day ago</span>
+          </li>
+          <li class="shade">
+            <img src="../assets/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the product name of the product Vape Body Mod SX Max Pro to Vape Body Mod XS Pro Max</span>
+            <span class="time">1 month ago</span>
+          </li>
+          <li>
+            <img src="../assets/avatar.jpg" alt="">
+            <span class="who">Roroy Maur</span>
+            <span class="what">updated the description of the product Vape Body Mod SX Max Pro</span>
+            <span class="time">1 month ago</span>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+<script src="../js/script.js"></script>
+
+</body>
+</html>
