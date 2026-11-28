@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Hub | Add Product</title>
+    <link rel="stylesheet" href="../css/inventory-hub-add-product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/fit-screen.js" defer></script>
+<script src="../js/app.js" defer></script>
+</head>
+<body>
+
+    
+
+    <main class="main-area">
+
+        
+
+        <section class="page-content">
+
+            <button class="go-back-button" id="goBackButton">
+                <span>←</span>
+                Go back
+            </button>
+
+            <div class="step-progress">
+                <div class="progress-line"></div>
+
+                <div class="progress-step current">
+                    <div class="step-number">1</div>
+                    <div class="step-label">
+                        <span class="step-title">Basic Info</span>
+                        <span class="step-description">Product Details and Media</span>
+                    </div>
+                </div>
+
+                <div class="progress-step upcoming">
+                    <div class="step-number">2</div>
+                    <div class="step-label">
+                        <span class="step-title">Pricing and Stock</span>
+                        <span class="step-description">Set the pricing and stock for the product</span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="product-panel">
+
+                <div class="basic-information">
+                    <div class="section-heading">
+                        <p class="section-kicker">Basic Information</p>
+                        <h1>Product Information</h1>
+                        <p class="section-description">
+                            Enter the basic details about your product
+                        </p>
+                    </div>
+
+                    <form id="productInformationForm">
+
+                        <div class="form-group">
+                            <label for="productName">Product Name<span>*</span></label>
+                            <input
+                                type="text"
+                                id="productName"
+                                name="productName"
+                                placeholder="Enter a clear, descriptive product title"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group description-group">
+                            <label for="productDescription">Product Description<span>*</span></label>
+                            <textarea
+                                id="productDescription"
+                                name="productDescription"
+                                placeholder="Provide a detailed description of your product"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productVariation">Product Variation (if any)<span>*</span></label>
+                            <select id="productVariation" name="productVariation">
+                                <option value="" selected disabled>Selected Variation</option>
+                                <option value="No Variation">No Variation</option>
+                                <option value="Color">Color</option>
+                                <option value="Size">Size</option>
+                                <option value="Flavor">Flavor</option>
+                                <option value="Capacity">Capacity</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productBrand">Product Brand</label>
+                            <select id="productBrand" name="productBrand">
+                                <option value="" selected disabled>Selected Brand</option>
+                                <option value="Vaporesso">Vaporesso</option>
+                                <option value="Voopoo">Voopoo</option>
+                                <option value="Oxva">Oxva</option>
+                                <option value="Uwell">Uwell</option>
+                                <option value="Geekvape">Geekvape</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productCategory">Product Category</label>
+                            <select id="productCategory" name="productCategory">
+                                <option value="" selected disabled>Selected Category</option>
+                                <option value="Device">Device</option>
+                                <option value="Pod">Pod</option>
+                                <option value="Coil">Coil</option>
+                                <option value="E-liquid">E-liquid</option>
+                                <option value="Accessories">Accessories</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="upload-section">
+
+                    <div class="upload-heading">
+                        <div class="upload-heading-icon">＋</div>
+                        <div>
+                            <h2>Upload Photo</h2>
+                            <p>Select and upload the photo of your choice</p>
+                        </div>
+                    </div>
+
+                    <div class="upload-divider"></div>
+
+                    <div class="drop-zone" id="dropZone">
+
+                        <div class="upload-content" id="uploadContent">
+                            <div class="cloud-icon">
+                                <svg viewBox="0 0 64 64" fill="none">
+                                    <path d="M18 45H14C7.9 45 3 40.1 3 34C3 28.1 7.6 23.3 13.4 23C15.4 13.9 23.5 7 33.2 7C43.4 7 51.8 14.6 53 24.5C58 25.7 61 29.8 61 35C61 40.5 56.5 45 51 45H46" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M32 55V28M22 38L32 28L42 38" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                            <h3>Choose a file or drag &amp; drop it here</h3>
+                            <p>JPEG, PNG, PDF, and MP4 formats, up to 50MB</p>
+
+                            <button type="button" class="browse-button" id="browseButton">
+                                Browse File
+                            </button>
+                        </div>
+
+                        <div class="image-preview" id="imagePreview">
+                            <img id="previewImage" src="../assets/vape-pod-ii.png" alt="Selected product image">
+                            <div class="preview-details">
+                                <span id="fileName"></span>
+                                <button type="button" id="removeFileButton">Remove file</button>
+                            </div>
+                        </div>
+
+                        <input
+                            type="file"
+                            id="productImage"
+                            accept=".jpg,.jpeg,.png,.pdf,.mp4"
+                            hidden
+                        >
+                    </div>
+
+                    <p class="upload-note" id="uploadNote">
+                        You can upload one product photo at a time.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <div class="bottom-actions">
+                <button type="button" class="cancel-button" id="cancelButton">
+                    Cancel
+                </button>
+
+                <button type="button" class="next-button" id="nextButton">
+                    Next
+                    <span>→</span>
+                </button>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="../js/inventory-hub-add-product.js"></script>
+</body>
+</html>

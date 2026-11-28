@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Hub | Add Product Pricing</title>
+    <link rel="stylesheet" href="../css/inventory-hub-add-product-pricing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/fit-screen.js" defer></script>
+<script src="../js/app.js" defer></script>
+</head>
+<body>
+
+    
+
+    <main class="main-content">
+        
+
+        <section class="page-content">
+
+            <button class="back-button" id="goBackTop">Go back</button>
+
+            <div class="stepper">
+                <div class="step completed">
+                    <span class="step-number">1</span>
+                    <div class="step-text">
+                        <span class="step-title">Basic Info</span>
+                        <span class="step-description">Product Details and Media</span>
+                    </div>
+                </div>
+
+                <div class="step-line"></div>
+
+                <div class="step active">
+                    <span class="step-number">2</span>
+                    <div class="step-text">
+                        <span class="step-title">Pricing and Stock</span>
+                        <span class="step-description">Set the pricing and stock for the product</span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="form-container">
+                <div class="form-panel">
+
+                    <div class="panel-heading">
+                        <h2>Pricing</h2>
+                    </div>
+
+                    <section class="form-section">
+                        <h3>Pricing Information</h3>
+                        <p class="section-description">Enter the pricing details about your product</p>
+
+                        <div class="field-heading">
+                            <label>Base Price <span class="required">*</span></label>
+                        </div>
+
+                        <div id="pricingRows">
+                            <div class="dynamic-row price-row">
+                                <span class="row-symbol">−</span>
+                                <input type="number" class="price-input" placeholder="Enter base price of the product" min="0" step="0.01">
+                                <button type="button" class="add-row" data-target="pricingRows" aria-label="Add price">+</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="section-divider"></div>
+
+                    <section class="form-section stock-section">
+                        <h3>Stock Information</h3>
+                        <p class="section-description">Enter the stock details about your product</p>
+
+                        <div id="stockRows">
+                            <div class="dynamic-row stock-row">
+                                <span class="row-symbol">−</span>
+                                <input type="number" class="stock-input" placeholder="Enter stock quantity" min="0" step="1">
+                                <button type="button" class="add-row" data-target="stockRows" aria-label="Add stock field">+</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="section-divider"></div>
+
+                    <section class="form-section alert-section">
+                        <h3>Stock Alert Indicator</h3>
+                        <div class="dynamic-row threshold-row">
+                            <span class="info-icon">ⓘ</span>
+                            <input type="number" id="lowStockThreshold" placeholder="Enter low-stock threshold" min="0" step="1">
+                        </div>
+
+                        <p class="helper-text">
+                            The system will automatically send an alert when a product's
+                            stock reaches or falls below its set low-stock threshold.
+                        </p>
+                    </section>
+
+                </div>
+            </section>
+
+            <footer class="page-actions">
+                <button class="action-button previous-button" id="previousButton">
+                    Previous
+                </button>
+                <button class="action-button add-product-button" id="addProductButton">
+                    Add Product
+                </button>
+            </footer>
+
+        </section>
+    </main>
+
+    <script src="../js/inventory-hub-add-product-pricing.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Report | Completed Orders</title>
+    <link rel="stylesheet" href="../css/sales-report-completed-orders.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/fit-screen.js" defer></script>
+<script src="../js/app.js" defer></script>
+</head>
+<body>
+
+    
+
+    
+
+    <main class="main-content">
+
+        <a href="../pages/sales-report.html" class="back-button">
+            Go back
+        </a>
+
+        <section class="orders-container">
+
+            <div class="orders-header">
+                <h1>Completed Orders</h1>
+
+                <div class="header-actions">
+                    <button class="action-button" id="viewAllButton">
+                        View All
+                    </button>
+
+                    <button class="action-button sort-button" id="sortButton">
+                        <span>☷</span>
+                        Sort
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <span class="search-icon">⌕</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search customer name"
+                >
+            </div>
+
+            <div class="table-wrapper">
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Amount</th>
+                            <th>Qty</th>
+                            <th>Payment Method</th>
+                            <th>Order Date and Time</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="ordersTableBody">
+                        <tr>
+                            <td>Roroy Maur</td>
+                            <td>₱1,000.00</td>
+                            <td>1</td>
+                            <td>Cash</td>
+                            <td>September 11, 2001 | 3:38AM</td>
+                            <td><button class="view-order-button">View Order</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>Paul Malicdem</td>
+                            <td>₱3,500.00</td>
+                            <td>5</td>
+                            <td>Cash</td>
+                            <td>September 11, 2001 | 1:38PM</td>
+                            <td><button class="view-order-button">View Order</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>Flux Hakaishin</td>
+                            <td>₱2,210.00</td>
+                            <td>3</td>
+                            <td>E-Payment</td>
+                            <td>September 12, 2001 | 4:38PM</td>
+                            <td><button class="view-order-button">View Order</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>Nathaniel Obis</td>
+                            <td>₱550.00</td>
+                            <td>1</td>
+                            <td>E-Payment</td>
+                            <td>September 12, 2001 | 7:10PM</td>
+                            <td><button class="view-order-button">View Order</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>Roy Malicdem</td>
+                            <td>₱880.00</td>
+                            <td>2</td>
+                            <td>E-Payment</td>
+                            <td>September 13, 2001 | 9:38PM</td>
+                            <td><button class="view-order-button">View Order</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button class="pagination-button" id="previousButton">Previous</button>
+
+                <span class="page-indicator">
+                    Page <strong id="currentPage">1</strong> of
+                    <strong id="totalPages">10</strong>
+                </span>
+
+                <button class="pagination-button" id="nextButton">Next</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/sales-report-completed-orders.js"></script>
+</body>
+</html>

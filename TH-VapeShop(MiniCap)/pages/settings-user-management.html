@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management | TH Vapeshop</title>
+    <link rel="stylesheet" href="../css/settings-user-management.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/fit-screen.js" defer></script>
+<script src="../js/app.js" defer></script>
+</head>
+<body>
+
+<div class="app-container">
+
+    
+
+    <main class="main-content">
+
+        
+
+        <section class="page-content">
+
+            <a href="../pages/settings.html" class="back-button">Go back</a>
+
+            <section class="users-card">
+
+                <div class="toolbar">
+                    <div class="search-box">
+                        <span>⌕</span>
+                        <input type="search" id="searchInput" placeholder="Search">
+                    </div>
+
+                    <button class="add-staff-button" id="addStaffButton">
+                        <span>+</span> Add Staff
+                    </button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th class="checkbox-column">
+                                    <input type="checkbox" id="selectAll">
+                                </th>
+                                <th>Full Name <span class="sort-icon">↕</span></th>
+                                <th>Email <span class="sort-icon">↕</span></th>
+                                <th>Username <span class="sort-icon">↕</span></th>
+                                <th>Account Added <span class="sort-icon">↕</span></th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="userTableBody">
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td class="name-cell">
+                                    <img src="../assets/vape-pod-iv-max.png" alt="">
+                                    John Smith
+                                </td>
+                                <td>johnsmith@gmail.com</td>
+                                <td>jonny77</td>
+                                <td>March 12, 2023</td>
+                                <td class="actions-cell">
+                                    <button class="edit-button" title="Edit">✎</button>
+                                    <button class="delete-button" title="Delete">♜</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td class="name-cell">
+                                    <img src="../assets/vape-pod-iv-max.png" alt="">
+                                    Olivia Bennett
+                                </td>
+                                <td>oliviabennett@gmail.com</td>
+                                <td>olly659</td>
+                                <td>June 27, 2022</td>
+                                <td class="actions-cell">
+                                    <button class="edit-button" title="Edit">✎</button>
+                                    <button class="delete-button" title="Delete">♜</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td class="name-cell">
+                                    <img src="../assets/vape-pod-iv-max.png" alt="">
+                                    Daniel Warren
+                                </td>
+                                <td>dwarren3@gmail.com</td>
+                                <td>dwarren3</td>
+                                <td>January 8, 2024</td>
+                                <td class="actions-cell">
+                                    <button class="edit-button" title="Edit">✎</button>
+                                    <button class="delete-button" title="Delete">♜</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td class="name-cell">
+                                    <img src="../assets/vape-pod-iv-max.png" alt="">
+                                    Chloe Hayes
+                                </td>
+                                <td>chloehhye@gmail.com</td>
+                                <td>chloehh</td>
+                                <td>October 5, 2021</td>
+                                <td class="actions-cell">
+                                    <button class="edit-button" title="Edit">✎</button>
+                                    <button class="delete-button" title="Delete">♜</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td class="name-cell">
+                                    <img src="../assets/vape-pod-iv-max.png" alt="">
+                                    Marcus Reed
+                                </td>
+                                <td>reeds777@gmail.com</td>
+                                <td>reeds7</td>
+                                <td>February 19, 2023</td>
+                                <td class="actions-cell">
+                                    <button class="edit-button" title="Edit">✎</button>
+                                    <button class="delete-button" title="Delete">♜</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td class="name-cell">
+                                    <img src="../assets/vape-pod-iv-max.png" alt="">
+                                    Isabelle Clark
+                                </td>
+                                <td>belleclark@gmail.com</td>
+                                <td>bellecl</td>
+                                <td>August 30, 2022</td>
+                                <td class="actions-cell">
+                                    <button class="edit-button" title="Edit">✎</button>
+                                    <button class="delete-button" title="Delete">♜</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td class="name-cell">
+                                    <img src="../assets/vape-pod-iv-max.png" alt="">
+                                    Lucas Mitchell
+                                </td>
+                                <td>lucamich@gmail.com</td>
+                                <td>lucamich</td>
+                                <td>April 23, 2024</td>
+                                <td class="actions-cell">
+                                    <button class="edit-button" title="Edit">✎</button>
+                                    <button class="delete-button" title="Delete">♜</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td class="name-cell">
+                                    <img src="../assets/vape-pod-iv-max.png" alt="">
+                                    Mark Wilburg
+                                </td>
+                                <td>markwill32@gmail.com</td>
+                                <td>markwill32</td>
+                                <td>November 14, 2020</td>
+                                <td class="actions-cell">
+                                    <button class="edit-button" title="Edit">✎</button>
+                                    <button class="delete-button" title="Delete">♜</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td class="name-cell">
+                                    <img src="../assets/vape-pod-iv-max.png" alt="">
+                                    Nicholas Agenn
+                                </td>
+                                <td>nicolass009@gmail.com</td>
+                                <td>nicolass009</td>
+                                <td>July 6, 2023</td>
+                                <td class="actions-cell">
+                                    <button class="edit-button" title="Edit">✎</button>
+                                    <button class="delete-button" title="Delete">♜</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td class="name-cell">
+                                    <img src="../assets/vape-pod-iv-max.png" alt="">
+                                    Mia Nadinn
+                                </td>
+                                <td>mianaddiin@gmail.com</td>
+                                <td>mianaddiin</td>
+                                <td>December 31, 2021</td>
+                                <td class="actions-cell">
+                                    <button class="edit-button" title="Edit">✎</button>
+                                    <button class="delete-button" title="Delete">♜</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="row-checkbox"></td>
+                                <td class="name-cell">
+                                    <img src="../assets/vape-pod-iv-max.png" alt="">
+                                    Noemi Villan
+                                </td>
+                                <td>noemivill99@gmail.com</td>
+                                <td>noemi</td>
+                                <td>August 10, 2024</td>
+                                <td class="actions-cell">
+                                    <button class="edit-button" title="Edit">✎</button>
+                                    <button class="delete-button" title="Delete">♜</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <span>Showing 11 users</span>
+                    <div>
+                        <button disabled>Previous</button>
+                        <button class="current-page">1</button>
+                        <button>Next</button>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+    </main>
+</div>
+
+<!-- Add / Edit Staff Modal -->
+<div class="modal-overlay" id="staffModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 id="modalTitle">Add Staff</h2>
+            <button type="button" id="closeModal" class="close-modal">×</button>
+        </div>
+
+        <form id="staffForm">
+            <label for="staffName">Full Name</label>
+            <input type="text" id="staffName" required>
+
+            <label for="staffEmail">Email</label>
+            <input type="email" id="staffEmail" required>
+
+            <label for="staffUsername">Username</label>
+            <input type="text" id="staffUsername" required>
+
+            <div class="modal-actions">
+                <button type="button" id="cancelModal" class="cancel-button">Cancel</button>
+                <button type="submit" class="save-button">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="../js/settings-user-management.js"></script>
+</body>
+</html>
